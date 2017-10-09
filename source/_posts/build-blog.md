@@ -61,6 +61,10 @@ deploy:
   branch: master
 ```
 
+### Hexo的版本控制与持续集成
+[参考文章](https://formulahendry.github.io/2016/12/04/hexo-ci/#comments)
+思路：新建一个项目，每次代码更新的时候，通过CI生成新的github.io文件
+问题： 由于我使用next的主题文件，CI后的css、js/src、images、vendors文件夹全部删除了，我通过的是删除next文件提交，然后再添加的方法解决的，原因不太清楚，很神奇，哭..
 
 ### 其它
 1 使用hexo new page tags/categories 创建分类或标签
