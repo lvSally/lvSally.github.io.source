@@ -2,7 +2,7 @@
 title: promise学习
 date: 2017-12-06 19:51:27
 categories: js
-tags: js基础
+tags: es6
 ---
 
 >学习promise刚开始是相当痛苦的，抱着`深入理解es6`这本书就开始看promise是个什么东西，先读了事件和回调，并不知道promise存在的意义，读到串联promise我就放弃了，感觉学习这个知识一点也不开心，学起来也很费力。直到有一天学超分享了Promise.All()的方法，好像一下就顿悟了，js这个脚本语言根本就不会存在多线程这种概念，由于我们可以自定义promise类型，在then()方法中可以异步去执行一些逻辑，才知道promise用处不仅仅是在ajax外面new一个promise。promise其实很牛逼。
