@@ -217,6 +217,7 @@ tags: ajax
   get参数存放在请求行中
   post参数存在于请求正文, 通常不会写在url中..
   [HTTP 协议简介](http://funhacks.net/2017/03/01/http/)
+
 ## express对于post和get的不同处理
   ```
   var express = require('express');
@@ -232,5 +233,6 @@ tags: ajax
     res.json({test: 'test'});
   })
   ```
+  
 ## 写在最后
 花了很多时间去验证一些想法花了很多时间，不过很开心，后期有时间还是要系统去看看http相关的知识:-D。
