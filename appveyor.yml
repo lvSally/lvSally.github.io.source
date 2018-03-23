@@ -1,17 +1,17 @@
 clone_depth: 5
 
 environment:
+  nodejs_version: "8"
   access_token:
     secure: uF55+RbWABidM1Irre7ZRkC9NLv6OxK2BgLZKzZXczF2slpkHabccD1JlKL7h0ZQ
 
 install:
-  - npm install -g cnpm --registry=https://registry.npm.taobao.org
-  - cnpm install -g n
-  - n stable
+  - ps: Install-Product node $env:nodejs_version
+  - npm -g install npm@next
   - node --version
-  - cnpm --version
-  - rm -rf node_modules/ && cnpm install
-  - cnpm install hexo-cli -g
+  - npm --version
+  - rm -rf node_modules/ && npm install
+  - npm install hexo-cli -g
 
 build_script:
   - hexo clean
