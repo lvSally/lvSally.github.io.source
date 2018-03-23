@@ -36,6 +36,10 @@ tags: ajax
   3 `text/xml`
   4 `multipart/form-data`
 
+  参考
+  [四种常见的 POST 提交数据方式](https://imququ.com/post/four-ways-to-post-data-in-http.html)
+  [post请求，xhr.send(data)函数的data参数类型有哪些？](https://segmentfault.com/q/1010000008811883) 
+
   ### 使用原生ajax写法
   简易版get:
     ```
@@ -233,6 +237,6 @@ tags: ajax
     res.json({test: 'test'});
   })
   ```
-  
+
 ## 写在最后
 花了很多时间去验证一些想法花了很多时间，不过很开心，后期有时间还是要系统去看看http相关的知识:-D。
