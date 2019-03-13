@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="view list">
+        <span class="detail-btn">detail</span>
+        <span class="show-modeal">show-modeal</span>
+      </div>
+      <div class="view details">
+        <span class="back-btn">back</span>
+      </div>
+    </div>
+    <div class="modal"></div>
+  </body>
+  <style>
+  body {
+    margin: 0;
+  }
+  .container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  .view {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #ccc;
+    transition: transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+
+    /*
+      [will-change]:(https://developer.mozilla.org/zh-CN/docs/Web/CSS/will-change)
+      let the browser know we plan to animate each view in and out
+    */
+    will-change: transform;
+  }
+
+  .details {
+    background: green;
+    transform: translateX(100%);
+  }
+  .view-change .list {
+    transform: translateX(-100%);
+  }
+  .view-change .details {
+    transform: translateX(0);
+  }
+
+  .modal {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    width: 100px;
+    height: 100px;
+    background: red;
+    z-index: 100;
+    pointer-events: none;
+    
+    opacity: 0;
+    transform: scale(1.15);
+    transition:
+      transform 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946),
+      opacity 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+
+    will-change: transform, opacity;
+  }
+  .modal.visible {
+    pointer-events: auto;
+    transform: scale(1);
+    opacity: 1;
+  }
+  </style>
+  <script type="text/javascript">
+    const detailBtn = document.querySelector('.detail-btn')
+    const backBtn = document.querySelector('.back-btn')
+    const container = document.querySelector('.container')
+    const showModeal = document.querySelector('.show-modeal')
+    const modal = document.querySelector('.modal')
+    detailBtn.addEventListener('click', () => {
+      container.classList.toggle('view-change')
+    })
+    backBtn.addEventListener('click', () => {
+      container.classList.toggle('view-change')
+    })
+    showModeal.addEventListener('click', () => {
+      modal.classList.toggle('visible')
+    })
+    modal.addEventListener('click', () => {
+      modal.classList.toggle('visible')
+    })
+  </script>
+</html>

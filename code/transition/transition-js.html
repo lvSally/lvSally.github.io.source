@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="box" click="">
+      盒子
+    </div>
+  </body>
+  <style>
+    span {
+      cursor: pointer;
+      padding: 10px;
+      display: inline-block;
+    }
+    .box {
+      border: 1px solid;
+      width: 100px;
+      height: 100px;
+      transition: 1s;
+    }
+    .box.move {
+      transform: translate(200px, 200px);
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+  <script type="text/javascript">
+  const box = document.querySelector('.box')
+  box.addEventListener('transitionend', function() {
+    console.log('transitionend 已完成');
+  }, false);
+
+  box.addEventListener('click', function() {
+    box.classList.toggle('move')
+  })
+  </script>
+</html>
