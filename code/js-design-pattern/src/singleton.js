@@ -15,3 +15,7 @@ export let getSingle = function(fn) {
 export default function() {}
 
 // 确保只有一个实例，并提供全局访问。
+// 单例
+let instance = getSingle(createDiv)
+instance()
+instance() // 多次调用不会添加新的div
