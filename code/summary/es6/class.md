@@ -40,3 +40,9 @@ console.log(mapped instanceof Array);   // true
 
 ## new.target
 在构造函数中利用new.target，用于模仿面向对象语言中抽象类不能被实例化行为
+
+## Symbol
+每个从Symbol()返回的symbol值都是唯一的。一个symbol值能作为对象属性的标识符；这是该数据类型仅有的目的。
+Symbol属性（作为特定标识使用）
+Symbol.iterator: 一个返回一个对象默认迭代器的方法。被 for...of 使用。
+Symbol.species: 一个用于创建派生对象的构造器函数。

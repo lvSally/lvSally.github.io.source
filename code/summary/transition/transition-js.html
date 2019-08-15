@@ -31,6 +31,7 @@
   <script type="text/javascript">
   const box = document.querySelector('.box')
   box.addEventListener('transitionend', function() {
+    box.style.transform = 'translate(100px, 100px)';
     console.log('transitionend 已完成');
   }, false);
 

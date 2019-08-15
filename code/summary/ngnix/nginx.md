@@ -8,7 +8,8 @@ nginx -s stop // 关闭ng
 
 
 ## 调用微信SDK需要相同域名操作花瓶和ng解决方案
-  Charles（主要用于查看详细的接口请求）:
+  Charles:
+  将远程地址映射至本地，场景：在微信中使用扫描功能需要同域名操作
   shelf.champzee.com/api* -> test1-shelf.champzee.com (测试环境接口映射)
   shelf.champzee.com -> 172.16.0.93 (本地代码映射)
 

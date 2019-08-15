@@ -1,5 +1,5 @@
 >
-昨天开始阅读迭代器与生成器，看到生成器对迭代器提供的各种帮助，由于平成也没有用过，一脸懵逼，读到最后生成器对于异步编程写法，发现生成器(`* + yield`)好像es7中的(`async + await`),迫不及待想和小伙伴沟通下，后面还是选择自己搜一下。[Async-Await≈Generators+Promises](https://juejin.im/post/5b04c7db6fb9a07aa542a772)
+昨天开始阅读迭代器与生成器，看到生成器对迭代器提供的各种帮助，由于平时也没有用过，一脸懵逼，读到最后生成器对于异步编程写法，发现生成器(`* + yield`)好像es7中的(`async + await`),迫不及待想和小伙伴沟通下，后面还是选择自己搜一下。[Async-Await≈Generators+Promises](https://juejin.im/post/5b04c7db6fb9a07aa542a772)
 
 ## 迭代器与生成器(generators)
 `迭代器:` 迭代器被设计专用于迭代的对象，带有特定的接口，所有的迭代器对象都拥有next方法，会返回一个结果对象`{done: false, value: val}`, 当最后一个值返回时，会返回`{done: true, value: undefined}`
@@ -22,6 +22,9 @@ function *createIterator() {
 ```javascript
 let arr = [1, 2, 3]
 let iterator = arr[Symbol.iterator]()
+for(item of iterator) {
+  console.log(item)
+}
 console.log(iterator.next())
 console.log(iterator.next())
 console.log(iterator.next())
