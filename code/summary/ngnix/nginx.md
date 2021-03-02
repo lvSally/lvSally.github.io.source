@@ -1,10 +1,22 @@
 ## 基础
-配置文件保存地址: /usr/local/etc/nginx/nginx.conf
+nginx文件地址: /usr/local/etc/nginx/nginx.conf
+nginx配置地址: open /usr/local/etc/nginx/servers
 ng默认配置文件 /usr/local/etc/nginx/nginx.conf.default
+
 
 ## 启动与关闭
 nginx // 启用ng
 nginx -s stop // 关闭ng
+
+## 目录匹配
+替换内容
+location  /zp-api/ {
+   proxy_pass https://test-api.geelytech.com/console-gateway/zp-api/;
+}
+不替换匹配内容ß
+location /console-gateway/zp-api {
+  proxy_pass https://test-api.geelytech.com;
+}
 
 
 ## 调用微信SDK需要相同域名操作花瓶和ng解决方案
