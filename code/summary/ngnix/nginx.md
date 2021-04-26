@@ -11,11 +11,11 @@ nginx -s stop // 关闭ng
 ## 目录匹配
 替换内容
 location  /zp-api/ {
-   proxy_pass https://test-api.geelytech.com/console-gateway/zp-api/;
+   proxy_pass https://test-api.xxxx.com/console-gateway/zp-api/;
 }
 不替换匹配内容ß
 location /console-gateway/zp-api {
-  proxy_pass https://test-api.geelytech.com;
+  proxy_pass https://test-api.xxxx.com;
 }
 
 

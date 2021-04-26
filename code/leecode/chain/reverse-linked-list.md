@@ -1,12 +1,12 @@
 ## 递归
 ``` javascript
   function factorial(n) {
-      console.log(n)
-      debugger
-      if (n == 1) return n;
-      let a = factorial(n - 1)
-      let total  = n * a
-      return total
+    console.log(n)
+    debugger
+    if (n == 1) return n;
+    let a = factorial(n - 1)
+    let total  = n * a
+    return total
   }
 
   function factorial(n) {
@@ -21,11 +21,11 @@
   // 构建基本的琏结构。
   let head, tall, pointer,length = 0
   function Node(value) {
-  return {
-    value,
-    next: null,
-    pre: null
-  }
+    return {
+      value,
+      next: null,
+      pre: null
+    }
 }
 
 // 迭代生成链结构
@@ -69,3 +69,6 @@ function reverseFn(head) {
 2 生成链表
 3 理解递归使用场景
 4 递归的调用顺序（判断结束条件一直调用自身(递过程)，满足结束条件开始(归操作)）
+
+>4 对递归思考
+树结构，链表结构，factorial等重复性可以通过递归解决，循环也可以解决重复问题，什么时候使用递归呢，清晰的表达某个单纯的实现过程？
