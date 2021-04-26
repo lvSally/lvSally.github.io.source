@@ -5,7 +5,7 @@ var path = require('path');
 
 var app = express();
 
-app.use('/api', proxy('https://dev-bach.champzee.com', {
+app.use('/api', proxy('https://dev-bach.cmpz.com', {
   proxyReqPathResolver: (req, res) => {
     return '/api' + require('url').parse(req.url).path;
   }

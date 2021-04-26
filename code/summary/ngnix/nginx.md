@@ -13,7 +13,7 @@ nginx -s stop // 关闭ng
 location  /zp-api/ {
    proxy_pass https://test-api.xxxx.com/console-gateway/zp-api/;
 }
-不替换匹配内容ß
+不替换匹配内容
 location /console-gateway/zp-api {
   proxy_pass https://test-api.xxxx.com;
 }
@@ -22,19 +22,19 @@ location /console-gateway/zp-api {
 ## 调用微信SDK需要相同域名操作花瓶和ng解决方案
   Charles:
   将远程地址映射至本地，场景：在微信中使用扫描功能需要同域名操作
-  shelf.champzee.com/api* -> test1-shelf.champzee.com (测试环境接口映射)
-  shelf.champzee.com -> 172.16.0.93 (本地代码映射)
+  shelf.cmpz.com/api* -> test1-shelf.cmpz.com (测试环境接口映射)
+  shelf.cmpz.com -> 172.16.0.93 (本地代码映射)
 
   Nginx: 
   ```
     server {
       listen       80;
-      server_name  shelf.champzee.com;
+      server_name  shelf.cmpz.com;
 
       charset UTF-8;
 
       location /api {
-          proxy_pass https://test1-shelf.champzee.com;
+          proxy_pass https://test1-shelf.cmpz.com;
       }
 
       location / {

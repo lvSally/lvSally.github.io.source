@@ -4,7 +4,7 @@
 >子模块允许你将一个 Git 仓库作为另一个 Git 仓库的子目录。 它能让你将另一个仓库克隆到自己的项目中，同时还保持提交的独立。
 
 ```
-git submodule add -b master git@git.champzee.com:frontend/CPZAdminUI.git src/CPZAdminUI
+git submodule add -b master git@git.cmpz.com:frontend/CPZAdminUI.git src/CPZAdminUI
 
 # 更新 submodule 到远端最新
 git submodule update --remote
