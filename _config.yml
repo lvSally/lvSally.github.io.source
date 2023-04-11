@@ -76,5 +76,6 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://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@github.com/lvSally/lvSally.github.io.git
+  repository: git@github.com:lvSally/lvSally.github.io.git
+  token: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
   branch: master
