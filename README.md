@@ -1,8 +1,8 @@
 ## [博客地址](https://lvsally.github.io/)
 
 ## 初始化
-cnpm i
-sudo cnpm i hexo -g
+npm i
+sudo npm i hexo -g
 
 ## 项目启动
 hexo server
