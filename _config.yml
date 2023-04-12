@@ -77,5 +77,4 @@ theme: next
 deploy:
   type: git
   repository: git@github.com:lvSally/lvSally.github.io.git
-  token: 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
   branch: master
